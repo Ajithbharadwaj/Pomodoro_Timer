@@ -1,0 +1,161 @@
+:root{
+    --bg:#0f172a;
+    --card:#1e293b;
+    --text:#f8fafc;
+    --primary:#0d6efd;
+    --success:#198754;
+    --warning:#ffc107;
+    --danger:#dc3545;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
+    min-height:100vh;
+    color:var(--text);
+    font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+}
+
+.card{
+    background:var(--card);
+    border:none;
+    border-radius:18px;
+    color:white;
+}
+
+.card-header{
+    background:#26364d;
+    color:white;
+    font-weight:bold;
+    border-radius:18px 18px 0 0 !important;
+}
+
+#timer{
+    font-size:72px;
+    font-weight:bold;
+    text-align:center;
+    letter-spacing:3px;
+    color:#00e5ff;
+    margin-top:15px;
+    text-shadow:
+        0 0 8px #00e5ff,
+        0 0 20px #00e5ff;
+}
+
+.status{
+    text-align:center;
+}
+
+.badge{
+    font-size:18px;
+    padding:10px 20px;
+}
+
+.progress{
+    border-radius:20px;
+    background:#364152;
+}
+
+.progress-bar{
+    transition:width .2s linear;
+}
+
+button{
+    min-width:150px;
+    font-weight:600;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    transition:.25s;
+}
+
+table{
+    color:white !important;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd){
+    background:rgba(255,255,255,.05);
+}
+
+.table-striped>tbody>tr:nth-of-type(even){
+    background:rgba(255,255,255,.02);
+}
+
+.table th{
+    color:#8ec5ff;
+}
+
+.table td{
+    vertical-align:middle;
+}
+
+.stat-value{
+    font-weight:bold;
+    color:#00e5ff;
+}
+
+.study-mode{
+    box-shadow:
+        0 0 25px rgba(25,135,84,.6);
+}
+
+.break-mode{
+    box-shadow:
+        0 0 25px rgba(255,193,7,.7);
+}
+
+.timeup-mode{
+    animation:flash .8s infinite;
+}
+
+@keyframes flash{
+
+    0%{
+        box-shadow:0 0 10px red;
+    }
+
+    50%{
+        box-shadow:0 0 35px red;
+    }
+
+    100%{
+        box-shadow:0 0 10px red;
+    }
+
+}
+
+#timer.blink{
+    animation:blink .8s infinite;
+}
+
+@keyframes blink{
+
+    50%{
+        opacity:.25;
+    }
+
+}
+
+@media(max-width:768px){
+
+    #timer{
+        font-size:48px;
+    }
+
+    button{
+        width:100%;
+    }
+
+}
+
+@media(max-width:480px){
+
+    #timer{
+        font-size:38px;
+    }
+
+    .badge{
+        font-size:15px;
+    }
+
+}
